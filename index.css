@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid darkblue;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: rgb(25, 69, 105);
+}
+
+.opposite-cars {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  width: 150px;
+  height: 300px;
+  background: white;
+  transform: rotateX(75deg) rotateY(0deg) rotateZ(70deg);
+  perspective: 10000px;
+  transform-style: preserve-3d;
+  transform-origin: left;
+}
+
+.car-front {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: gray;
+  transform: rotateX(90deg) rotateZ(0deg);
+  transform-origin: top;
+  top: 100%;
+  left: 0;
+  transform-style: preserve-3d;
+}
+
+.opposite-car-hood {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: gray;
+  top: -50%;
+  transform: rotateX(-90deg) rotateZ(0deg);
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+}
+
+.window-glass {
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  background: lightblue;
+  transform: rotateX(-45deg) rotateZ(0deg);
+  border: 1px solid black;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  top: -65%;
+}
+
+.car-roof {
+  position: absolute;
+  width: 100%;
+  height: 170%;
+  background: gray;
+  top: -170%;
+  transform: rotateX(45deg) rotateZ(0deg);
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+}
+
+.rear-window {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  top: -100%;
+  transform: rotateX(50deg) rotateZ(0deg);
+  transform-style: preserve-3d;
+  border-top: 5px solid green;
+  transform-origin: bottom;
+}
+
+.car-right-side {
+  z-index: 0;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: gray;
+  transform: rotateY(-90deg);
+  transform-origin: left;
+  left: 100%;
+  transform-style: preserve-3d;
+}
+
+.car-right-side-door-1 {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background: gray;
+  top: 36%;
+  z-index: 2;
+  border-top: 1px solid green;
+  transform-style: preserve-3d;
+}
+
+.car-right-side-door-1::before {
+  position: absolute;
+  content: "";
+  width: 172%;
+  height: 0%;
+  top: 0;
+  border-top: 2px solid black;
+  background: rgb(252, 186, 3);
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.car-right-side-door-1-window-1 {
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  background: lightblue;
+  left: 68%;
+  top: 15%;
+  border: 1px solid rgb(38, 38, 38);
+  border-left: 1px solid red;
+  transform: rotateZ(45deg);
+  transform-origin: left;
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+
+.car-right-side-door-1-window-2 {
+  position: absolute;
+  width: 100%;
+  height: 63%;
+  background: lightblue;
+  left: 73%;
+  top: 0%;
+  border-left: 1px solid red;
+  transform: rotateZ(0deg);
+  transform-origin: left;
+  transform-style: preserve-3d;
+  z-index: 0;
+}
+
+.car-right-side-door-1-window-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.car-right-side-door-2 {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background: gray;
+  top: 17%;
+  transform-style: preserve-3d;
+}
+
+.car-left-side {
+  z-index: 0;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background: gray;
+  transform: rotateX(0deg) rotateY(90deg);
+  transform-origin: right;
+  transform-style: preserve-3d;
+  top: 0%;
+  right: 100%;
+}
+
+.car-back {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: gray;
+  transform: rotateX(90deg) translate3d(0, 0, 0px);
+  transform-origin: top;
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0%;
+}
+
+.car-trunk {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: gray;
+  top: 100%;
+  transform: rotateX(-90deg) rotateZ(0deg);
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  border-top: 1px solid black;
+  transform-origin: top;
+}
